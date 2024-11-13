@@ -11,7 +11,7 @@ Group=root
 ExecStart=/opt/newsboy/bin/newsboy
 Restart=always
 RestartSec=10
-WorkingDirectory=/opt/newsboy
+WorkingDirectory=/opt/newsboy/bin
 
 [Install]
 WantedBy=multi-user.target

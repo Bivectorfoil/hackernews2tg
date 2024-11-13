@@ -4,8 +4,10 @@ After=network.target
 
 [Service]
 Type=simple
-User=root # or any user with permission to access the binary
-Group=root # or any group with permission to access the binary
+# or any user with permission to access the binary
+User=root
+# or any group with permission to access the binary
+Group=root
 ExecStart=/opt/newsboy/bin/newsboy
 Restart=always
 RestartSec=10

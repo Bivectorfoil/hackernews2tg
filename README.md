@@ -35,7 +35,8 @@ Every day telegram bot pickup the first 5 Hack news topic and push them to a pri
 
 2. Build the project:
    ```bash
-   go build -o dist/newsboy
+   chmod +x build.sh
+   ./build.sh
    ```
 
 3. Create and edit configuration file:
@@ -46,7 +47,8 @@ Every day telegram bot pickup the first 5 Hack news topic and push them to a pri
 
 4. Run installation script:
    ```bash
-   sudo deploy/scripts/install.sh
+   chmod +x deploy/scripts/install.sh
+   ./deploy/scripts/install.sh
    ```
 
 ### Common Service Management Commands

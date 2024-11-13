@@ -20,11 +20,10 @@ fi
 
 # 创建安装目录
 mkdir -p /opt/newsboy/bin
-mkdir -p /opt/newsboy/config
 
 # 复制二进制文件和配置
 cp "$PROJECT_ROOT/dist/newsboy" /opt/newsboy/bin/
-cp "$PROJECT_ROOT/.env" /opt/newsboy/config/
+cp "$PROJECT_ROOT/.env" /opt/newsboy/bin/
 chmod +x /opt/newsboy/bin/newsboy
 
 # 获取当前用户

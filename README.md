@@ -9,8 +9,7 @@ Every day telegram bot pickup the first 5 Hack news topic and push them to a pri
 - A telegram bot
 - A telegram channel (private or public, ATTENTIONS: different channel has different id format, eg: private: -1001234567890, publich: yourchannel_id, for private channle, "-100" is prefix)
 
-
-## Usage
+## Development
 
 1. create telegram bot with @BotFather bot (if not have one)
 
@@ -26,18 +25,48 @@ Every day telegram bot pickup the first 5 Hack news topic and push them to a pri
 
 7. run `./dist/newsboy` (or `./dist/newsboy.exe` on Windows) to start the bot
 
-## Deploy
+## Installation (On Linux)
 
-1. run build.sh (or build.ps1 on Windows) file to build the binary file
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/newsboy.git
+   cd newsboy
+   ```
 
-2. write a service for the `newboy` program, enabled it with systemctl
+2. Build the project:
+   ```bash
+   go build -o dist/newsboy
+   ```
+
+3. Create and edit configuration file:
+   ```bash
+   cp .env.example .env
+   vim .env
+   ```
+
+4. Run installation script:
+   ```bash
+   sudo deploy/scripts/install.sh
+   ```
+
+### Common Service Management Commands
+
+```bash
+# Stop service
+sudo systemctl stop newsboy
+
+# Restart service
+sudo systemctl restart newsboy
+
+# View logs
+sudo journalctl -u newsboy
+```
 
 ## TODO
 
-- [ ] linux platform build script
-
-- [ ] linux servce file
-
+- [x] linux platform build script
+- [x] linux service file
+- [x] support any permission user to run linux install script
 - [ ] github ci/cd
 
 

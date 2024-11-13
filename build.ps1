@@ -12,11 +12,6 @@ $ldflags = "-w -s"  # -w 删除调试信息, -s 删除符号表
 Write-Host "Building windows version..."
 go build -ldflags $ldflags -o "dist/newsboy.exe"
 
-# 如果需要同时构建 Linux 版本
-$env:GOOS = "linux"
-Write-Host "Building linux version..."
-go build -ldflags $ldflags -o "dist/newsboy"
-
 Write-Host "Build completed!"
 Write-Host "Windows version: dist/newsboy.exe"
 Write-Host "Linux version: dist/newsboy"

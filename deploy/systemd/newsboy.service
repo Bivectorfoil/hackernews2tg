@@ -1,0 +1,15 @@
+[Unit]
+Description=Newsboy Service
+After=network.target
+
+[Service]
+Type=simple
+User=root # or any user with permission to access the binary
+Group=root # or any group with permission to access the binary
+ExecStart=/opt/newsboy/bin/newsboy
+Restart=always
+RestartSec=10
+WorkingDirectory=/opt/newsboy
+
+[Install]
+WantedBy=multi-user.target
